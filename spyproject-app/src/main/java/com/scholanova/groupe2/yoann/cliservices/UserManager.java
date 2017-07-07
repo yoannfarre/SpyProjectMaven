@@ -92,6 +92,7 @@ public class UserManager {
 		int option;
 		BmpFile bmpfile;
 		NewFileGenerator nfg;
+		HiddenFile filetohide;
 
 		do {
 
@@ -128,7 +129,7 @@ public class UserManager {
 
 						bmpfile = scanBmpFile();
 
-						HiddenFile filetohide = scanFileToHide();
+						filetohide = scanFileToHide();
 
 						ifc.setInputBmpFile(bmpfile);
 						ifc.setHiddenFile(filetohide);
@@ -141,6 +142,9 @@ public class UserManager {
 							nfg.generateNewBmpFile();
 
 						}
+						
+						this.validBmpFile = false;
+						this.validFileToHide = false;
 
 					} while (!possibleProcess);
 					break;

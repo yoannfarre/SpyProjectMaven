@@ -70,8 +70,4 @@ public class BmpBody extends AbstractBmpFilePart {
 		this.metaDataAreaStore = metaDataAreaStore;
 	}
 
-	/********************************
-	 *********** Methods ************
-	 ********************************/
-
 }

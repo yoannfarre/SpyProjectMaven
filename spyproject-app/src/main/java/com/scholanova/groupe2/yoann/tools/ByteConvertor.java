@@ -5,18 +5,33 @@ import java.util.List;
 
 public class ByteConvertor {
 
+	/********************************
+	 ********** Attributes **********
+	 ********************************/
+
 	private byte[] byteArray;
+
+	/********************************
+	 *********** Test Main **********
+	 ********************************/
 
 	public static void main(String[] args) {
 
-
 	}
+
+	/********************************
+	 *********** Builders ***********
+	 ********************************/
 
 	public ByteConvertor(byte[] byteArray_) {
 
 		byteArray = byteArray_;
 
 	}
+
+	/********************************
+	 *********** Methods ************
+	 ********************************/
 
 	public List<String> decomposeByteArray() {
 
@@ -43,7 +58,7 @@ public class ByteConvertor {
 
 		for (byte b : byteArray) {
 
-			if (lineCounter < 4*hiddenFileSize) {
+			if (lineCounter < 4 * hiddenFileSize) {
 
 				binaryByte = String.format("%8s", Integer.toBinaryString(b & 0xFF)).replace(' ', '0');
 
