@@ -18,7 +18,7 @@ public class NewFileGenerator {
 	 ********************************/
 
 	private BmpFile bmpFile;
-	private HiddenFile hiddenfile;
+	private HiddenFile hiddenFile;
 
 	/********************************
 	 *********** Test Main **********
@@ -36,15 +36,15 @@ public class NewFileGenerator {
 	 *********** Builders ***********
 	 ********************************/
 
-	public NewFileGenerator(BmpFile bmpfile, HiddenFile filetohide) {
+	public NewFileGenerator(BmpFile bmpFile, HiddenFile fileToHide) {
 
-		this.bmpFile = bmpfile;
-		this.hiddenfile = filetohide;
+		this.bmpFile = bmpFile;
+		this.hiddenFile = fileToHide;
 	}
 
-	public NewFileGenerator(BmpFile bmpfile) {
+	public NewFileGenerator(BmpFile bmpFile) {
 
-		this.bmpFile = bmpfile;
+		this.bmpFile = bmpFile;
 
 	}
 
@@ -71,10 +71,10 @@ public class NewFileGenerator {
 	public void generateNewHiddenFile() {
 
 		bmpFile.splitBmpFile();
-		ArrayList<AbstractBmpFilePart> listparts = bmpFile.getListbmppart();
+		ArrayList<AbstractBmpFilePart> listOfParts = bmpFile.getListbmppart();
 		BmpPartConvertor convertor = new BmpPartConvertor();
 		convertor.setBmpfile(bmpFile);
-		for (AbstractBmpFilePart bfp : listparts) {
+		for (AbstractBmpFilePart bfp : listOfParts) {
 			convertor.setBmppart(bfp);
 			if (bfp instanceof BmpBody) {
 				HiddenFileMetaData hfmd = convertor.extractMetaData();
@@ -91,25 +91,25 @@ public class NewFileGenerator {
 	public void generateNewBmpFile() {
 
 		bmpFile.splitBmpFile();
-		ArrayList<AbstractBmpFilePart> listparts = bmpFile.getListbmppart();
+		ArrayList<AbstractBmpFilePart> listOfParts = bmpFile.getListbmppart();
 		BmpPartConvertor convertor = new BmpPartConvertor();
-		convertor.setFiletohide(hiddenfile);
+		convertor.setHiddenFile(hiddenFile);
 		convertor.setBmpfile(bmpFile);
-		for (AbstractBmpFilePart bfp : listparts) {
+		for (AbstractBmpFilePart bfp : listOfParts) {
 			convertor.setBmppart(bfp);
 			if (bfp instanceof BmpBody) {
 				convertor.hideFileInBody();
-				listparts.set(listparts.indexOf(bfp), convertor.getBmppart());
+				listOfParts.set(listOfParts.indexOf(bfp), convertor.getBmppart());
 			}
 		}
-		buildNewFile(listparts);
+		buildNewFile(listOfParts);
 	}
 
-	public void buildNewFile(ArrayList<AbstractBmpFilePart> listparts) {
+	public void buildNewFile(ArrayList<AbstractBmpFilePart> listOfParts) {
 
 		File out = new File(bmpFile.getParentFile() + System.getProperty("file.separator") + "new" + bmpFile.getName());
 		try (FileOutputStream fos = new FileOutputStream(out)) {
-			for (AbstractBmpFilePart part : listparts) {
+			for (AbstractBmpFilePart part : listOfParts) {
 				fos.write(part.getByteBuffer().array());
 			}
 		} catch (IOException e) {

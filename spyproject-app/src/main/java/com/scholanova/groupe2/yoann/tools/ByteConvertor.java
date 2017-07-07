@@ -79,7 +79,7 @@ public class ByteConvertor {
 		int listCounter = 0;
 		StringBuilder sb = new StringBuilder();
 
-		for (String s : decomposedBinary) {// TODO changer la boucle
+		for (String s : decomposedBinary) {
 
 			if ((listCounter + 1) % 4 == 0) {
 				sb.append(s);

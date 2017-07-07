@@ -27,8 +27,8 @@ public abstract class AbstractFile extends File {
 	 *********** Builders ***********
 	 ********************************/
 
-	public AbstractFile(String pathname) {
-		super(pathname);
+	public AbstractFile(String pathName) {
+		super(pathName);
 		// TODO Auto-generated constructor stub
 	}
 

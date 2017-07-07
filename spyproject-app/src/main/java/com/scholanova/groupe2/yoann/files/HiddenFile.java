@@ -23,8 +23,8 @@ public class HiddenFile extends AbstractFile {
 	 *********** Builders ***********
 	 ********************************/
 
-	public HiddenFile(String pathname) {
-		super(pathname);
+	public HiddenFile(String pathName) {
+		super(pathName);
 	}
 
 	/********************************

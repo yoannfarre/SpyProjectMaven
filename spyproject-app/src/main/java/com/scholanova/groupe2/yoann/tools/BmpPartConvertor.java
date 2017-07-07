@@ -62,28 +62,20 @@ public class BmpPartConvertor {
 		return bmpPart;
 	}
 
-	public HiddenFile getHiddenFile() {
-		return hiddenFile;
-	}
-
 	/********************************
 	 *********** Setters ************
 	 ********************************/
 
-	public void setBmpfile(BmpFile bmpfile) {
-		this.bmpFile = bmpfile;
+	public void setBmpfile(BmpFile bmpFile) {
+		this.bmpFile = bmpFile;
 	}
 
-	public void setHiddenfile(HiddenFile hiddenfile) {
-		this.hiddenFile = hiddenfile;
+	public void setBmppart(AbstractBmpFilePart bmpPart) {
+		this.bmpPart = bmpPart;
 	}
 
-	public void setBmppart(AbstractBmpFilePart bmppart) {
-		this.bmpPart = bmppart;
-	}
-
-	public void setFiletohide(HiddenFile filetohide) {
-		this.hiddenFile = filetohide;
+	public void setHiddenFile(HiddenFile hiddenFile) {
+		this.hiddenFile = hiddenFile;
 	}
 
 	/********************************

@@ -90,9 +90,9 @@ public class UserManager {
 
 		InputFileAnalyser ifc = new InputFileAnalyser();
 		int option;
-		BmpFile bmpfile;
+		BmpFile bmpFile;
 		NewFileGenerator nfg;
-		HiddenFile filetohide;
+		HiddenFile fileToHide;
 
 		do {
 
@@ -116,9 +116,9 @@ public class UserManager {
 				switch (option) {
 				case 1:
 
-					bmpfile = scanBmpFile();
+					bmpFile = scanBmpFile();
 
-					nfg = new NewFileGenerator(bmpfile);
+					nfg = new NewFileGenerator(bmpFile);
 					nfg.generateNewHiddenFile();
 
 					break;
@@ -127,18 +127,18 @@ public class UserManager {
 
 					do {
 
-						bmpfile = scanBmpFile();
+						bmpFile = scanBmpFile();
 
-						filetohide = scanFileToHide();
+						fileToHide = scanFileToHide();
 
-						ifc.setInputBmpFile(bmpfile);
-						ifc.setHiddenFile(filetohide);
+						ifc.setInputBmpFile(bmpFile);
+						ifc.setHiddenFile(fileToHide);
 
 						if (ifc.canHideInFile()) {
 
 							possibleProcess = true;
 
-							nfg = new NewFileGenerator(bmpfile, filetohide);
+							nfg = new NewFileGenerator(bmpFile, fileToHide);
 							nfg.generateNewBmpFile();
 
 						}
@@ -162,17 +162,17 @@ public class UserManager {
 
 	public BmpFile scanBmpFile() {
 
-		BmpFile bmpfile = null;
+		BmpFile bmpFile = null;
 
 		while (!validBmpFile) {
 
 			System.out.println("Please enter the path of the bmpfile (For example : \"C:\\file.bmp\")");
 			String dirpath = scanFilePath();
-			bmpfile = new BmpFile(dirpath);
-			bmpfile.recoverFileExtension();
+			bmpFile = new BmpFile(dirpath);
+			bmpFile.recoverFileExtension();
 
-			if (bmpfile.tryIfExists()) {
-				if (bmpfile.getFileExtension().equals("bmp")) {
+			if (bmpFile.tryIfExists()) {
+				if (bmpFile.getFileExtension().equals("bmp")) {
 					validBmpFile = true;
 				} else {
 					System.out.println("This is not a .bmp File");
@@ -182,31 +182,31 @@ public class UserManager {
 			}
 
 			if (validBmpFile) {
-				bmpfile.recoverFileSize();
+				bmpFile.recoverFileSize();
 			}
 		}
 
-		return bmpfile;
+		return bmpFile;
 	}
 
 	public HiddenFile scanFileToHide() {
 
-		HiddenFile filetohide = null;
+		HiddenFile fileToHide = null;
 
 		while (!validFileToHide) {
 
 			System.out.println("Please enter the path of the file to hide (For example : \"C:\\file.txt\")");
 			String dirpath = scanFilePath();
-			filetohide = new HiddenFile(dirpath);
-			validFileToHide = filetohide.tryIfExists();
+			fileToHide = new HiddenFile(dirpath);
+			validFileToHide = fileToHide.tryIfExists();
 			if (validFileToHide) {
-				filetohide.recoverFileExtension();
-				filetohide.recoverFileSize();
+				fileToHide.recoverFileExtension();
+				fileToHide.recoverFileSize();
 			}
 
 		}
 
-		return filetohide;
+		return fileToHide;
 
 	}
 
@@ -214,10 +214,10 @@ public class UserManager {
 
 		sc = new Scanner(System.in);
 
-		String filepath = sc.nextLine();
-		System.out.println("The file path is : " + filepath);
+		String filePath = sc.nextLine();
+		System.out.println("The file path is : " + filePath);
 
-		return filepath;
+		return filePath;
 
 	}
 }
