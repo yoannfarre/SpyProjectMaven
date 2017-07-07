@@ -1,4 +1,4 @@
-package com.scholanova.groupe2.yoann.spyproject.tools;
+package com.scholanova.groupe2.yoann.tools;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,23 +9,6 @@ public class ByteConvertor {
 
 	public static void main(String[] args) {
 
-		// List<String> decomposedBinary = new ArrayList<>();
-		// decomposedBinary.add("11");
-		// decomposedBinary.add("11");
-		// decomposedBinary.add("01");
-		// decomposedBinary.add("01");
-		// decomposedBinary.add("01");
-		// decomposedBinary.add("01");
-		// decomposedBinary.add("01");
-		// decomposedBinary.add("11");
-		// decomposedBinary.add("01");
-		// decomposedBinary.add("00");
-		// decomposedBinary.add("00");
-		// decomposedBinary.add("11");
-		//
-		// byte[] b = recomposeByteArray(decomposedBinary);
-		// for (byte c : b)
-		// System.out.println(c);
 
 	}
 

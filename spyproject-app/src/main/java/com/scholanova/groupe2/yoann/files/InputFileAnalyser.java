@@ -1,8 +1,8 @@
-package com.scholanova.groupe2.yoann.spyproject.files;
+package com.scholanova.groupe2.yoann.files;
 
 import java.io.File;
 
-import com.scholanova.groupe2.yoann.spyproject.files.bmpfiles.BmpFile;
+import com.scholanova.groupe2.yoann.files.bmpfiles.BmpFile;
 
 public class InputFileAnalyser {
 

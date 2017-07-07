@@ -1,4 +1,4 @@
-package com.scholanova.groupe2.yoann.spyproject.files;
+package com.scholanova.groupe2.yoann.files;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

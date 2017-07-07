@@ -1,14 +1,14 @@
-package com.scholanova.groupe2.yoann.spyproject.tools;
+package com.scholanova.groupe2.yoann.tools;
 
 import java.nio.ByteBuffer;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
-import com.scholanova.groupe2.yoann.spyproject.files.HiddenFile;
-import com.scholanova.groupe2.yoann.spyproject.files.HiddenFileMetaData;
-import com.scholanova.groupe2.yoann.spyproject.files.bmpfiles.AbstractBmpFilePart;
-import com.scholanova.groupe2.yoann.spyproject.files.bmpfiles.BmpBody;
-import com.scholanova.groupe2.yoann.spyproject.files.bmpfiles.BmpFile;
+import com.scholanova.groupe2.yoann.files.HiddenFile;
+import com.scholanova.groupe2.yoann.files.HiddenFileMetaData;
+import com.scholanova.groupe2.yoann.files.bmpfiles.AbstractBmpFilePart;
+import com.scholanova.groupe2.yoann.files.bmpfiles.BmpBody;
+import com.scholanova.groupe2.yoann.files.bmpfiles.BmpFile;
 
 public class BmpPartConvertor {
 

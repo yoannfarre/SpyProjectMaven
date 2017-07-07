@@ -1,4 +1,4 @@
-package com.scholanova.groupe2.yoann.spyproject.files.bmpfiles;
+package com.scholanova.groupe2.yoann.files.bmpfiles;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -6,7 +6,7 @@ import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import com.scholanova.groupe2.yoann.spyproject.files.AbstractFile;
+import com.scholanova.groupe2.yoann.files.AbstractFile;
 
 public class BmpFile extends AbstractFile {
 
