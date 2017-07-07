@@ -1,12 +1,12 @@
-package com.scholanova.groupe2.yoann.cliservices;
+package com.scholanova.groupe2.yoann.spyproject.cliservices;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import com.scholanova.groupe2.yoann.files.HiddenFile;
-import com.scholanova.groupe2.yoann.files.InputFileAnalyser;
-import com.scholanova.groupe2.yoann.files.NewFileGenerator;
-import com.scholanova.groupe2.yoann.files.bmpfiles.BmpFile;
+import com.scholanova.groupe2.yoann.spyproject.files.HiddenFile;
+import com.scholanova.groupe2.yoann.spyproject.files.InputFileAnalyser;
+import com.scholanova.groupe2.yoann.spyproject.files.NewFileGenerator;
+import com.scholanova.groupe2.yoann.spyproject.files.bmpfiles.BmpFile;
 
 public class UserManager {
 

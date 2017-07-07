@@ -1,6 +1,6 @@
-package com.scholanova.groupe2.yoann;
+package com.scholanova.groupe2.yoann.spyproject;
 
-import com.scholanova.groupe2.yoann.cliservices.UserManager;
+import com.scholanova.groupe2.yoann.spyproject.cliservices.UserManager;
 
 public class App {
 

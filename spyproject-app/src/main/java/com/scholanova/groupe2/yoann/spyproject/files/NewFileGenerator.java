@@ -1,4 +1,4 @@
-package com.scholanova.groupe2.yoann.files;
+package com.scholanova.groupe2.yoann.spyproject.files;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -6,10 +6,10 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 
-import com.scholanova.groupe2.yoann.files.bmpfiles.AbstractBmpFilePart;
-import com.scholanova.groupe2.yoann.files.bmpfiles.BmpBody;
-import com.scholanova.groupe2.yoann.files.bmpfiles.BmpFile;
-import com.scholanova.groupe2.yoann.tools.BmpPartConvertor;
+import com.scholanova.groupe2.yoann.spyproject.files.bmpfiles.AbstractBmpFilePart;
+import com.scholanova.groupe2.yoann.spyproject.files.bmpfiles.BmpBody;
+import com.scholanova.groupe2.yoann.spyproject.files.bmpfiles.BmpFile;
+import com.scholanova.groupe2.yoann.spyproject.tools.BmpPartConvertor;
 
 public class NewFileGenerator {
 

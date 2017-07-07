@@ -1,4 +1,4 @@
-package com.scholanova.groupe2.yoann.files.bmpfiles;
+package com.scholanova.groupe2.yoann.spyproject.files.bmpfiles;
 
 import java.nio.ByteBuffer;
 import java.util.Arrays;
